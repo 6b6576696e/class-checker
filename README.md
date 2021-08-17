@@ -1,5 +1,5 @@
 # uci-class-bot
-A bot that regularly checks for course openings at UCI and will automatically register for them when open.  
+A bot that regularly checks for course openings at UCI and automatically register for them when open.  
 
 The program will parse WebSoc using BS4 to determine whether a course is open. The bot will attempt to register for the course through WebReg using Selenium. 
 
@@ -24,6 +24,6 @@ Example output after running for 30 seconds.
 ![Screenshot](images/example.png)
 
 ## Disclaimer
-This bot was made and intended for educational purposes only. Actual usage of any applications that unfairly give a user any advantage over other students while registering for classes violates OAISC standards.  
+This bot was made and intended for educational purposes only. Usage of any applications that unfairly give a student an advantage over their peers while registering for classes violates OAISC standards.  
 
 We are not responsible for the misuse of this program.
