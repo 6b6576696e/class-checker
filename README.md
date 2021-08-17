@@ -1,11 +1,13 @@
 # uci-class-checker
-A bot that registers for classes at UCI. The bot parses WebSoc using BS4 to determine whether a class is open. Attempts will be made to register for the course through WebReg using Selenium. 
+A bot that registers for classes at UCI. The program will parse WebSoc using BS4 to determine whether a course is open. The bot will attempt to register for the course through WebReg using Selenium. 
 
-This bot was built in 2020. As it is dependent on parsing HTML, any changes to UCI's website will affect the usability of this program.
+This bot was built and structured after UCI's registrar website in 2020. As it is dependent on parsing the HTML, any changes to UCI's website will affect the usability of this program.
 
 The intention of this project was to practice making HTTP requests and using external libraries.
 
 ## Usage
+
+The following explanation will demonstrate ONLY the ability of the bot to check for course availability.
 
 `courses.txt` will contain the desired course code(s) in the following format. Each line will represent a different course followed by co-courses.
 ```
