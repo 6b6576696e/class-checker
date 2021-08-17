@@ -5,6 +5,9 @@ import time
 
 
 class Bot:
+    """
+    A class that represents a bot registering courses.
+    """
     def __init__(self, user, password):
         options = webdriver.ChromeOptions()
         self.driver = webdriver.Chrome("C:\\WebDrivers\\chromedriver.exe", options=options)
@@ -12,6 +15,9 @@ class Bot:
         self.password = password
 
     def get_login_page(self):
+        """
+        Creates the login page to logon from.
+        """
         url = 'https://www.reg.uci.edu/cgi-bin/webreg-redirect.sh'
         self.driver.get(url)
 
@@ -24,6 +30,9 @@ class Bot:
         return self.login()
 
     def login(self):
+        """
+        Logons the login page with the given username and password.
+        """
         username_textbox = self.driver.find_element_by_id("ucinetid")
         username_textbox.send_keys(self.user)
 
@@ -36,6 +45,9 @@ class Bot:
         return self.login_check()
 
     def login_check(self):
+        """
+        Checks if we have properly logged in and reached the enrollment menu page.
+        """
         if 'Enrollment Menu' in self.driver.page_source:
             print('Login successful.')
             return True
@@ -44,6 +56,9 @@ class Bot:
             return False
 
     def get_enroll_page(self):
+        """
+        Navigates to the enrollment page from the enrollment menu page.
+        """
         try:
             self.driver.find_element_by_xpath("//input[@value='Enrollment Menu']").click()
             return True
@@ -51,7 +66,10 @@ class Bot:
             print("Unable to reach the enrollment page.")
             return False
 
-    def enroll(self, code):
+    def enroll(self, code: str):
+        """
+        Attempts to enroll into the course.
+        """
         try:
             print(f'Attempting to enroll in {code}.')
             self.driver.find_element_by_xpath("//input[@value='Enrollment Menu']").click()
@@ -70,5 +88,8 @@ class Bot:
             raise e
 
     def logout(self):
+        """
+        Safely logs out to avoid any login session bugs.
+        """
         self.driver.find_element_by_xpath("//input[@value='Logout']").click()
         self.driver.close()
