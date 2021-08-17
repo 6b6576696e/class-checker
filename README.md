@@ -1,17 +1,13 @@
 # uci-class-checker
+A bot that registers for classes at UCI. The bot parses WebSoc using BS4 to determine whether a class is open. Attempts will be made to register for the course through WebReg using Selenium. 
 
-Command line tool that parses UCI's class website to determine if a class is open.
+This bot was built in 2020. As it is dependent on parsing HTML, any changes to UCI's website will affect the usability of this program.
 
-## Example
+The intention of this project was to practice making HTTP requests and using external libraries.
 
-The file `courses.txt` contains course codes. Each line represents a different course followed by co-courses.
+## Usage
 
-```
-35470 35471 35472 35473
-26860 26861
-26845
-```
+To be added.
 
-Example output after running for 30 seconds.
-
-![](https://github.com/trankevint/classchecker/blob/master/images/example.png)
+## Disclaimer
+Educational purposes only. Bots violate OAISC standards. I am not responsible for misuse of this program.
