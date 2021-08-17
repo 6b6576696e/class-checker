@@ -1,5 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
+import random
+
+
+YEAR_TERM = ""
 
 
 class Check:
@@ -8,28 +12,24 @@ class Check:
         self.url = 'https://www.reg.uci.edu/perl/WebSoc'
         self.class_dict = class_dict
 
-    def check_all_courses(self):
+    def check_courses(self):
         open_courses = dict()
+
         for lec in self.class_dict:
-            if self.check_course(lec):
+            if self.search_course(lec):
                 open_courses[lec] = []
                 for disc in self.class_dict[lec]:
-                    if self.check_course(disc):
+                    if self.search_course(disc):
                         open_courses[lec].append(disc)
         return open_courses
 
-    def check_course(self, course_code):
-        page = self.search_course_page(course_code)
-        availability = self.check_course_page(course_code, page)
-        return availability
-
-    def search_course_page(self, course_code):
-        params = {'CourseCodes': course_code, 'YearTerm': '2020-92', 'Submit': 'XML'}
+    def search_course(self, class_code):
+        params = {'CourseCodes': class_code, 'YearTerm': YEAR_TERM, 'Submit': 'XML'}
         request = requests.get(self.url, params=params, headers=self.headers)
         page = BeautifulSoup(request.content, 'lxml')
-        return page
+        return self.check_course(class_code, page)
 
-    def check_course_page(self, course_code, page):
+    def check_course(self, class_code, page):
         if '/' in page.find('sec_enrolled').text:
             enrolled, max_enroll = [i.strip() for i in page.find('sec_enrolled').text.split('/')]
         else:
@@ -37,9 +37,10 @@ class Check:
             enrolled = page.find('sec_enrolled').text
 
         status = str(page.find('sec_status').text)
+
         if int(enrolled) < int(max_enroll) and status == 'OPEN':
-            print(f'{course_code} is open.')
+            print(f'{class_code} is open.')
             return True
         else:
-            print(f'{course_code} is not open.')
+            print(f'{class_code} is not open.')
             return False
