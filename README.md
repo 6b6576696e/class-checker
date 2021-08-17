@@ -2,7 +2,7 @@
 
 Command line tool that parses UCI's class website to determine if a class is open.
 
-## Demo
+## Example
 
 The file `courses.txt` contains course codes. Each line represents a different course followed by co-courses.
 
