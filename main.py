@@ -7,7 +7,10 @@ USER = ""
 PASS = ""
 
 
-def get_courses(file):
+def get_courses(file: str):
+    """
+    Fetches the courses from the text file and returns an organized dictionary of the courses and their labs/discussions.
+    """
     courses = dict()
     with open(file, 'r') as f:
         info = f.read().splitlines()
@@ -17,12 +20,18 @@ def get_courses(file):
     return courses
 
 
-def print_courses(courses):
+def print_courses(courses: dict):
+    """
+    Prints the courses and the labs/discussions that are open.
+    """
     for lec, disc in courses.items():
         print(f'{lec} and {disc} are open.')
 
 
 def run():
+    """
+    The driver that runs all the functions together.
+    """
     class_dict = get_courses("courses.txt")
     print('Grabbed codes.')
 
