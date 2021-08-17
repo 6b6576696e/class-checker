@@ -1,7 +1,6 @@
-from checker import Check
+from checker import *
 from bot import Bot, NoSuchElementException
 import time
-
 
 USER = ""
 PASS = ""
@@ -35,10 +34,8 @@ def run():
     class_dict = get_courses("courses.txt")
     print('Grabbed codes.')
 
-    checker = Check(class_dict)
-
     while class_dict:
-        open_courses = checker.check_courses()
+        open_courses = check_courses(class_dict)
         print_courses(open_courses)
 
         if not open_courses:
