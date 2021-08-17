@@ -11,7 +11,7 @@ The following explanation will demonstrate ONLY the program's ability to check f
 
 `courses.txt` will contain the desired course code(s) in the following format. Each line will represent a different course followed by co-courses.
 ```
-[Lecture] [Discussion] [Discussion]
+[Lecture] [Discussion]
 35470 35471 35472 35473
 26860 26861
 26845
