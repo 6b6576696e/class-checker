@@ -3,7 +3,7 @@ A bot that will regularly checks for course openings at UCI and will automatical
 
 The program will parse WebSoc using BS4 to determine whether a course is open. The bot will attempt to register for the course through WebReg using Selenium. 
 
-This bot was built and structured after UCI's registrar website in 2020. As it is dependent on parsing the HTML, any changes to UCI's website will affect the usability of this program.
+This bot was built specifically for UCI's registrar website in 2020. As it is dependent on parsing the HTML, any changes to UCI's website will affect the usability of this program.
 
 The intention of this project was to practice making HTTP requests and using external libraries.
 
