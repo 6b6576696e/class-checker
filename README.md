@@ -22,4 +22,4 @@ Example output after running for 30 seconds.
 ![Screenshot](images/example.png)
 
 ## Disclaimer
-Educational purposes only. Bots violate OAISC standards. I am not responsible for misuse of this program.
+Educational purposes only. Usage of botting programs violate OAISC standards. I am not responsible for misuse of this program.
