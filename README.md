@@ -7,7 +7,7 @@ The intention of this project was to practice making HTTP requests and using ext
 
 ## Usage
 
-The following explanation will demonstrate ONLY the ability of the bot to check for course availability.
+The following explanation will demonstrate ONLY the program's ability to check for course availability.
 
 `courses.txt` will contain the desired course code(s) in the following format. Each line will represent a different course followed by co-courses.
 ```
