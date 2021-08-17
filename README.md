@@ -24,4 +24,4 @@ Example output after running for 30 seconds.
 ![Screenshot](images/example.png)
 
 ## Disclaimer
-Educational purposes only. Usage of botting programs violate OAISC standards. I am not responsible for misuse of this program.
+This bot was made and intended for educational purposes only. Actual usage of any applications that unfairly give a user any advantage over other students while registering for classes violates OAISC standards. I am not responsible for the misuse of this program.
