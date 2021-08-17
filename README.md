@@ -5,7 +5,7 @@ This bot was built and structured after UCI's registrar website in 2020. As it i
 
 The intention of this project was to practice making HTTP requests and using external libraries.
 
-## Usage
+## Examples
 
 The following explanation will demonstrate ONLY the program's ability to check for course availability.
 
