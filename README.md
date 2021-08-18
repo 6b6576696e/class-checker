@@ -24,6 +24,4 @@ Example output after running for 30 seconds.
 ![Screenshot](images/example.png)
 
 ## Disclaimer
-This bot was made and intended for educational purposes only. Usage of any applications that unfairly give a student an advantage over their peers while registering for classes violates OAISC standards.  
-
-We are not responsible for the misuse of this program.
+This bot was made and intended for educational purposes only. Usage of any applications that unfairly give a student an advantage over their peers while registering for classes violates OAISC standards.
